@@ -70,3 +70,4 @@ suit = ActionSuitAI()
 print(suit.perform_action())
 print(suit.perform_action())
 print(suit.recharge())
+
