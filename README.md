@@ -5,7 +5,7 @@ Bootstrap a simple Node.js CLI that creates a Vercel sandbox. Use this code:
 import { Sandbox } from '@vercel/sandbox';
 
 const sandbox = await Sandbox.create();
-
+#7df2ff1ecb209820aa81d36d528732020c7581ea
 const { exitCode } = await sandbox.runCommand({
   cmd: 'node',
   args: ['-e', 'process.exit(0)'],
