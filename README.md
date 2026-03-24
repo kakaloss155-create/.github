@@ -41,3 +41,60 @@ if __name__ == "__main__":
     engine = EvolutionEngine(ai)
     for i in range(1, 101):
         print(engine.evolve())
+-------------------------------------------
+
+#Open Program ActionSuitAI Emoji Code 💞💕✨💞💕
+
+#Evolution Emoji Code
+
+#Javascript program
+
+#Jump in ActionSuitAI
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Evolution Emoji AI</title>
+  <style>
+    .emoji {
+      display: inline-block;
+      font-size: 3rem;
+      margin: 10px;
+    }
+    /* การเคลื่อนไหวแบบ AI */
+    @keyframes aiLife {
+      0%   { transform: scale(1) rotate(0deg); }
+      25%  { transform: scale(1.2) rotate(10deg); }
+      50%  { transform: scale(1) rotate(0deg); }
+      75%  { transform: scale(1.2) rotate(-10deg); }
+      100% { transform: scale(1) rotate(0deg); }
+    }
+    .alive {
+      animation: aiLife 1.5s infinite;
+    }
+  </style>
+</head>
+<body>
+  <h1>💞💕✨ Evolution Emoji Code 💞💕</h1>
+  <div id="emoji-container">
+    <span class="emoji">💞✨</span>
+    <span class="emoji">✨💕</span>
+    <span class="emoji">💞</span>
+    <span class="emoji">💕</span>
+  </div>
+  <script>
+    // เลือกอิโมจิทั้งหมด
+    const emojis = document.querySelectorAll('.emoji');
+
+    emojis.forEach(emoji => {
+      const text = emoji.textContent;
+      // ถ้ามี ✨ อยู่ข้างหน้า หรือข้างหลัง → ให้มีชีวิต
+      if (text.includes("✨")) {
+        emoji.classList.add("alive");
+      }
+    });
+  </script>
+</body>
+</html>
+<span class="emoji">✨🤖</span>
+<span class="emoji">🤖✨</span>
