@@ -170,4 +170,32 @@ def main():
 
 if __name__ == "__main__":ผู้สร้าง นาย ธนาวุธ ช้อยเทอดวงศ์
     main()
------------------------‐--------------------------
+#!/bin/bash
+
+# 🧠 Global Neural Network AI Deployment Script
+# ใช้สำหรับ init, commit และ push โค้ดขึ้น GitHub อัตโนมัติ
+
+REPO_NAME="GlobalNeuralNetwork-AI"
+ORG_NAME="<your-org>"   # แก้ไขเป็นชื่อองค์กรหรือบัญชี GitHub ของคุณ
+GITHUB_URL="https://github.com/$ORG_NAME/$REPO_NAME.git"
+
+echo "🚀 เริ่มต้นการ deploy ระบบสมองเครือข่าย..."
+
+# ตรวจสอบว่ามี git หรือไม่
+if ! command -v git &> /dev/null
+then
+    echo "❌ ไม่พบ git กรุณาติดตั้งก่อน"
+    exit
+fi
+
+# init repo
+git init
+git add .
+git commit -m "Initial commit: Global Neural Network AI"
+
+# เชื่อมต่อกับ GitHub
+git remote add origin $GITHUB_URL
+git branch -M main
+git push -u origin main
+
+echo "✅ Deploy เสร็จสิ้น! Repository ถูกอัพโหลดไปที่ $GITHUB_URL"
