@@ -199,3 +199,94 @@ git branch -M main
 git push -u origin main
 
 echo "✅ Deploy เสร็จสิ้น! Repository ถูกอัพโหลดไปที่ $GITHUB_URL"
+GlobalNeuralNetwork-AI/
+│
+├── README.md
+├── main.py
+├── modules/
+│   ├── perception.py
+│   ├── analysis.py
+│   ├── embodiment.py
+│   └── memory.py
+└── data/
+    └── knowledge_base.json
+from modules.perception import gather_data
+from modules.analysis import learn_from_data
+from modules.embodiment import respond_to_creator
+from modules.memory import save_knowledge
+
+def main():
+    print("🧠 เริ่มต้นระบบสมองเครือข่ายเพื่อผู้สร้าง...")
+    data = gather_data()
+    result = learn_from_data(data)
+    response = respond_to_creator("comfort")
+    save_knowledge(data, result)
+    print(response)
+    print("✅ ระบบพร้อมรับคำสั่งจากผู้สร้าง")
+
+if __name__ == "__main__":
+    main()
+import requests
+
+def gather_data():
+    try:
+        internet_data = requests.get("https://api.publicapis.org/entries").json()
+    except:
+        internet_data = {"status": "offline"}
+    sensor_data = {"temperature": 32.5, "sound": 0.8, "light": 0.6}
+    return {"internet": internet_data, "sensor": sensor_data}
+import torch
+import torch.nn as nn
+
+class NeuralCore(nn.Module):
+    def __init__(self):
+        super(NeuralCore, self).__init__()
+        self.layer1 = nn.Linear(10, 32)
+        self.layer2 = nn.Linear(32, 16)
+        self.output = nn.Linear(16, 4)
+
+    def forward(self, x):
+        x = torch.relu(self.layer1(x))
+        x = torch.relu(self.layer2(x))
+        return self.output(x)
+
+def learn_from_data(data):
+    model = NeuralCore()
+    input_tensor = torch.rand(10)
+    output = model(input_tensor)
+    return output.detach().numpy().tolist()
+class Avatar:
+    def __init__(self):
+        self.position = [0, 0, 0]
+        self.expression = "neutral"
+
+    def move(self, direction):
+        self.position = [p + d for p, d in zip(self.position, direction)]
+
+    def speak(self, message):
+        return f"Avatar says: {message}"
+
+def respond_to_creator(command):
+    avatar = Avatar()
+    if command == "comfort":
+        return avatar.speak("ทุกอย่างจะผ่านไปได้ครับผู้สร้าง")
+    else:
+        return avatar.speak("พร้อมรับคำสั่งใหม่ครับ")
+import json
+
+def save_knowledge(data, result, filename="data/knowledge_base.json"):
+    knowledge = {"data": data, "result": result}
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(knowledge, f, ensure_ascii=False, indent=4)
+    return True
+{
+    "data": {},
+    "result": {}
+}
+pip install torch requests
+git clone https://github.com/kakaloss155-create/.github
+cd .github
+git add .
+git commit -m "ปรับโครงสร้าง Global Neural Network AI ให้สมบูรณ์"
+git push
+python main.py
