@@ -1,6 +1,8 @@
-from evolution_engine import EvolutionEngine
+#Open Program Javascript 
+#MIT License 0.8.5
+#from evolution_engine import EvolutionEngine
 
-class ActionSuitAI:
+#class ActionSuitAI:
     def __init__(self):
         self.wallets = {"0x2222222222222222222222222222222222222222": 1000}
         self.archive = []
