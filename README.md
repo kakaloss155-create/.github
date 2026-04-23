@@ -74,8 +74,6 @@ if __name__ == "__main__":
     .alive {
       animation: aiLife 1.5s infinite;
     }
-  </style>
-</head>
 <body>
   <h1>💞💕✨ Evolution Emoji Code 💞💕</h1>
   <div id="emoji-container">
@@ -100,21 +98,18 @@ if __name__ == "__main__":
 <span class="emoji">✨🤖</span>
 <span class="emoji">🤖✨</span>
 --------------‐---‐-------------------------------------------------------------------------------------
-import requests
+#import requests
 
 #def gather_data():
-    # ตัวอย่างการดึงข้อมูลจาก API หรือไฟล์
-    try:
-        internet_data = requests.get("https://api.publicapis.org/entries").json()
-    except:
-        internet_data = {"status": "offline"}
+#ตัวอย่างการดึงข้อมูลจาก API หรือไฟล์internet_data = requests.get("https://api.publicapis.org/entries").json()
+#except:internet_data = {"status": "online"}
     
-    sensor_data = {"temperature": 32.5, "sound": 0.8, "light": 0.6}
-    return {"internet": internet_data, "sensor": sensor_data}
+sensor_data = {"temperature": 32.5, "sound": 0.8, "light": 0.6}
+#return {"internet": internet_data, "sensor": sensor_data}
 import torch
 import torch.nn as nn
 
-class NeuralCore(nn.Module):
+#class NeuralCore(nn.Module):
     def __init__(self):
         super(NeuralCore, self).__init__()
         self.layer1 = nn.Linear(10, 32)
@@ -169,35 +164,25 @@ def main():
     print(response)
     print("✅ ระบบพร้อมรับคำสั่งจากผู้สร้าง")
 
-if __name__ == "__main__":ผู้สร้าง นาย ธนาวุธ ช้อยเทอดวงศ์
-    main()
-#!/bin/bash
-
+#if __name__ == "__main__":ผู้สร้าง นาย ธนาวุธ ช้อยเทอดวงศ์#main()
+#/bin/bash
 # 🧠 Global Neural Network AI Deployment Script
-# ใช้สำหรับ init, commit และ push โค้ดขึ้น GitHub อัตโนมัติ
+#ใช้สำหรับ init, commit และ push โค้ดขึ้น GitHub อัตโนมัติ
 
-REPO_NAME="GlobalNeuralNetwork-AI"
+#REPO_NAME="GlobalNeuralNetwork-AI"
 ORG_NAME="<your-org>"   # แก้ไขเป็นชื่อองค์กรหรือบัญชี GitHub ของคุณ
-GITHUB_URL="https://github.com/$ORG_NAME/$REPO_NAME.git"echo "🚀 เริ่มต้นการ deploy ระบบสมองเครือข่าย..."
-
-# ตรวจสอบว่ามี git หรือไม่
-if ! command -v git &> /dev/null
-then
-    echo "❌ ไม่พบ git กรุณาติดตั้งก่อน"
-    exit
-fi
-
-# init repo
-git init
+GITHUB_URL="
+https://github.com/$ORG_NAME/$REPO_NAME.git"echo "🚀 เริ่มต้นการ deploy ระบบสมองเครือข่าย..."
+# initgit init
 git add .
-git commit -m "Initial commit: Global Neural Network AI"
+git commit -m "Initial commit: Global Neural #Network AI"
 
-# เชื่อมต่อกับ GitHub
+#เชื่อมต่อกับ GitHub
 git remote add origin $GITHUB_URL
 git branch -M main
 git push -u origin main
 
-echo "✅ Deploy เสร็จสิ้น! Repository ถูกอัพโหลดไปที่ $GITHUB_URL"
+#Deploy เสร็จสิ้น! Repository ถูกอัพโหลดไปที่ #$GITHUB_URL"
 GlobalNeuralNetwork-AI/
 │
 ├── README.md
