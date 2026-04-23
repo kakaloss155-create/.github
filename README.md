@@ -84,7 +84,6 @@ if __name__ == "__main__":
     <span class="emoji">💞</span>
     <span class="emoji">💕</span>
   </div>
-  <script>
     // เลือกอิโมจิทั้งหมด
     const emojis = document.querySelectorAll('.emoji');
 
