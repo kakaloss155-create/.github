@@ -95,7 +95,7 @@ if __name__ == "__main__":
         emoji.classList.add("alive");
       }
     });
-  </script>
+  <true
 </body>
 </html>
 <span class="emoji">✨🤖</span>
@@ -103,7 +103,7 @@ if __name__ == "__main__":
 --------------‐---‐-------------------------------------------------------------------------------------
 import requests
 
-def gather_data():
+#def gather_data():
     # ตัวอย่างการดึงข้อมูลจาก API หรือไฟล์
     try:
         internet_data = requests.get("https://api.publicapis.org/entries").json()
@@ -179,9 +179,7 @@ if __name__ == "__main__":ผู้สร้าง นาย ธนาวุธ 
 
 REPO_NAME="GlobalNeuralNetwork-AI"
 ORG_NAME="<your-org>"   # แก้ไขเป็นชื่อองค์กรหรือบัญชี GitHub ของคุณ
-GITHUB_URL="https://github.com/$ORG_NAME/$REPO_NAME.git"
-
-echo "🚀 เริ่มต้นการ deploy ระบบสมองเครือข่าย..."
+GITHUB_URL="https://github.com/$ORG_NAME/$REPO_NAME.git"echo "🚀 เริ่มต้นการ deploy ระบบสมองเครือข่าย..."
 
 # ตรวจสอบว่ามี git หรือไม่
 if ! command -v git &> /dev/null
@@ -289,6 +287,4 @@ pip install torch requests
 git clone https://github.com/kakaloss155-create/.github
 cd .github
 git add .
-git commit -m "ปรับโครงสร้าง Global Neural Network AI ให้สมบูรณ์"
-git push
-python main.py
+#git commit -m "ปรับโครงสร้าง Global Neural #Network AI ให้สมบูรณ์"git push python main.py
